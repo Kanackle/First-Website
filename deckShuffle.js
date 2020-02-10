@@ -13,6 +13,7 @@ function makeDeck(){
 		}
 	}
 	return deck;
+	print deck;
 }
 
 function shuffleDeck(){
