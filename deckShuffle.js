@@ -8,14 +8,18 @@ function makeDeck(){
 			var card = {Value: numbers[j], Suit: suits[i]};
 				deck.push(card);
 		}
+	/*	for(i=0; i< deck.length; i++){
+			var card = deck[i];
+			document.getElementById("OGDeck").innerHTML = document.getElementById("OGDECK").innerHTML + card.Value + " of " + card.Suit + "<br>";
+		}*/
 	}
+	console.log(deck);
 	//alert(JSON.stringify(deck));
 	return deck;
-	
 }
 
 function shuffleDeck(){
-	console.log("Hello");
+	//console.log("Hello");
 	//two cards will change locations 500 times
 	for(var i = 0; i < 500; i++){
 		var loc1 = Math.floor((Math.random() * deck.length));
@@ -23,7 +27,13 @@ function shuffleDeck(){
 		var tempLoc = deck[loc1];
 		deck[loc1] = deck[loc2];
 		deck[loc2] = tempLoc;
+		
+		/*for(i=0; i< deck.length; i++){
+		var card = deck[i];
+		document.getElementById("Cards").innerHTML = document.getElementById("Cards").innerHTML + card.Value + " of " + card.Suit + "<br>"; 
+		}*/
 	}
+	return deck;
 }
 
 function badShuffle(){
@@ -52,11 +62,13 @@ function badShuffle(){
 	let newArray3 = [].concat(newArray1, newArray2);
 	//document.getElementById("Cards").innerHTML = JSON.stringify(newArray3);
 	
-	for(i=0; i< newArray3. length; i++){
+	for(i=0; i< newArray3.length; i++){
 		var card = newArray3[i];
-		document.getElementById("Cards").innerHTML = document.getElementById("Cards").innerHTML + card.Suit + " of " + card.Value + "<br>"; 
+		document.getElementById("badCards").innerHTML = document.getElementById("badCards").innerHTML + card.Value + " of " + card.Suit + "<br>"; 
 	}
 	return newArray3;
 }
 
-makeDeck();			
+makeDeck();
+shuffleDeck();
+badShuffle();			
