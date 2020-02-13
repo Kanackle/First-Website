@@ -13,7 +13,7 @@ function makeDeck(){
 			document.getElementById("OGDeck").innerHTML = document.getElementById("OGDECK").innerHTML + card.Value + " of " + card.Suit + "<br>";
 		}*/
 	}
-	console.log(deck);
+	//console.log(deck);
 	//alert(JSON.stringify(deck));
 	return deck;
 }
@@ -41,9 +41,9 @@ function badShuffle(){
 	var pile2 = new Array();
 	var pile3 = new Array();
 	var pile4 = new Array();
-	console.log(deck.length);
+	//console.log(deck.length);
 	for(i= 0; i < deck.length; i++){
-		console.log(i);
+		//console.log(i);
 		if(i % 4 == 0)
 			pile1.push(deck[i]);
 		if(i % 4 == 1)
@@ -53,10 +53,10 @@ function badShuffle(){
 		if(i % 4 == 3)
 			pile4.push(deck[i]);
 	}
-	console.log(pile1);
+	/*console.log(pile1);
 	console.log(pile2);
 	console.log(pile3);
-	console.log(pile4);
+	console.log(pile4);*/
 	let newArray1 = [].concat(pile1, pile3);
 	let newArray2 = [].concat(pile2, pile4);
 	let newArray3 = [].concat(newArray1, newArray2);
