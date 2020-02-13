@@ -1,3 +1,7 @@
 Blog Post:
-This week's assignment was to be straightforward, or so I had hoped. Despite having previously learned how to use Inspect Element and use HTML/CSS, the knowledge is buried deep in my head that I didn't truly remember any of these concepts learned. Therefore, what was to be a straightforward assignment instead turned out to be a challenge. 
-In Laurel Schwulst's post, the paragraph on clarity truly stuck to me. Although her message had to do with what a website is trying to convey and what it ends up conveying, clarity took on a slightly different meaning in the context of this assignment. Having been presented with all these languages all over, I was truly overwhelmed and I would have like to have some clarity on how to properly and truly use the Inspect Element feature. 
+This week's assignment was to be straightforward, or so I had hoped. 
+Despite having previously learned how to use Inspect Element and use HTML/CSS, the knowledge is buried deep in my head that I didn't truly remember any of these concepts learned. 
+Therefore, what was to be a straightforward assignment instead turned out to be a challenge. 
+In Laurel Schwulst's post, the paragraph on clarity truly stuck to me. 
+Although her message had to do with what a website is trying to convey and what it ends up conveying, clarity took on a slightly different meaning in the context of this assignment. 
+Having been presented with all these languages, I was truly overwhelmed and I would have like to have some clarity on how to properly and truly use the Inspect Element feature. 
