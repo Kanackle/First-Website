@@ -1,0 +1,13 @@
+This week's assignment was to use JavaScript to create two distinct shuffle functions. 
+In my head, this would be a simple assignment involving arrays and loops. 
+Unfortunately, nothing can ever be as simple as it seems in one's mind. 
+There were some aspects of JavaScript I was not familiar with. Even after learning them, I still experienced problems with my code. 
+My main problem - one that neither I nor anyone I asked for help knew the solution for - was that my outputs for shuffle would be printed multiple times. 
+
+In regards to the reading, I was not a huge fan of the Jodi's Infrastructure reading. 
+I did not fully grasp the concept of that reading. 
+The first half of the reading about the web being a medium for art was easy to grasp.
+However, when the article began describing JODI and the purpose of Unicode is where I lost the meaning of the article. 
+In contrast, I was really interested in the Crafting of Media article. 
+What really interested was how the article was essentially just a prediction - a very accurate prediction. 
+One part that really struck out to me was the beginning where the author analyzed the ulterior motives of these companies building these personal/business computers. 
