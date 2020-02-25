@@ -2,11 +2,39 @@
 <head>
 	<h1>ASSIGNMENT #3</h1>
 	<script type = "text/javascript" src = "Fetch.js"></script>
+<style>
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: 1100px;
+  border-style: inset;
+  border-width: 1px;
+}
+body{
+	background-image: url('https://wallpapercave.com/wp/mxWIeqB.jpg');
+}
+h1{
+	color: white;
+}
+p{
+	font-size: 18px;
+	color: White;
+}
+div{
+	font-size: 16px;
+	color: white;
+	font-weight: bold;
+}
+</style>
 </head>
 <body>
-	<p>Click the button to type in the name of the object you want crafted</p>
+	<p>Type in the name of the object you want crafted and click the button to view all required materials</p>
 	<input type ="text" id="itemName">
-	<button onclick="CraftItem()">Try it</button>
-	<div id="Craftables"></div><br>
+	<button onclick="CraftItem()">View Crafting Guide</button>
+	<br><br><br>
+	<div id= "CraftingCost"></div>
+	<div id="Craftables"></div>
 </body>
 </html>
