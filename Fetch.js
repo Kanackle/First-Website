@@ -27,14 +27,14 @@ fetch("https://cors-anywhere.herokuapp.com/https://us.api.blizzard.com/d3/data/a
 
 function CraftItem(){
 	var input = document.getElementById("itemName").value;
-	
 
 	for(i=0;i<recipes.length;i++){
 	if(input === recipes[i].name){
+		document.getElementById("CraftingCost").innerHTML = "Cost: " + recipes[i].cost + "<hr>";
 		console.log(recipes[i].name);
 		for(j=0;j<recipes[i].reagents.length;j++){
 				//console.log(recipes[i].name);
-				document.getElementById("Craftables").innerHTML += recipes[i].reagents[j].item.name + " " + recipes[i].reagents[j].quantity + "<br/>";
+				document.getElementById("Craftables").innerHTML += recipes[i].reagents[j].item.name +":" + " " + recipes[i].reagents[j].quantity + "<hr>";
 				console.log(recipes[i].reagents[j].item.name);
 				console.log(recipes[i].reagents[j].quantity);
 		}
