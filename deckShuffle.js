@@ -8,10 +8,10 @@ function makeDeck(){
 			var card = {Value: numbers[j], Suit: suits[i]};
 				deck.push(card);
 		}
-	/*	for(i=0; i< deck.length; i++){
-			var card = deck[i];
-			document.getElementById("OGDeck").innerHTML = document.getElementById("OGDECK").innerHTML + card.Value + " of " + card.Suit + "<br>";
-		}*/
+	}
+	for(i=0; i< deck.length(); i++){
+		var card = deck[i];
+		document.getElementById("OGdeck").innerHTML = document.getElementById("OGdeck").innerHTML + card.Value + " of " + card.Suit + "<br>";
 	}
 	//console.log(deck);
 	//alert(JSON.stringify(deck));
@@ -20,18 +20,17 @@ function makeDeck(){
 
 function shuffleDeck(){
 	//console.log("Hello");
-	//two cards will change locations 500 times
-	for(var i = 0; i < 500; i++){
+	//two cards will change locations 520 times
+	for(var i = 0; i < 520; i++){
 		var loc1 = Math.floor((Math.random() * deck.length));
 		var loc2 = Math.floor((Math.random() * deck.length));
 		var tempLoc = deck[loc1];
 		deck[loc1] = deck[loc2];
 		deck[loc2] = tempLoc;
-		
-		/*for(i=0; i< deck.length; i++){
+	}
+	for(i=0; i< deck.length; i++){
 		var card = deck[i];
 		document.getElementById("Cards").innerHTML = document.getElementById("Cards").innerHTML + card.Value + " of " + card.Suit + "<br>"; 
-		}*/
 	}
 	return deck;
 }

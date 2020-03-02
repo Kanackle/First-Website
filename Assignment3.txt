@@ -1,0 +1,18 @@
+This week's assignment was to create a website that takes data from an API and displays it in any form we choose.
+For this assignment, I picked the Blizzard API for Diablo 3.
+I wished the website to a crafting guide of sorts, where the user inputs an item they want crafted and the items necessary for its crafting are displayed.
+
+Improvements:
+I wish to let the user input in multiple items(not simultaneously) and have new information for each.
+At the moment, the website must be manually refreshed if the user wishes to get crafting information for a second item.
+The reason being, any item after the first that is inputted, the resulting crafting information is merely appended onto the bottom of the preexisting information.
+
+Readings:
+The "Stealth Infrastructure" and "It was raining in the data center" were very interesting readings. 
+I particularily liked how both articles were related to one another. 
+In "Stealth Infrastructure", it was stated how government surveillance tools are sometimes camoflouged into their surroundings.
+In the second article, what was interesting to me was the part where it mentioned how all the data centers in US were linked to one another via highway and train routes.
+However, one could not simply tell by looking at a data center map.
+Only by comparing existing map records of highways and train routes could it be shown where companies prefer to build their data centers.
+
+The article, "Critcial Atlas of the Internet" was an interesting read as it provided various theories on what the Internet is and what it can do.
