@@ -32,6 +32,7 @@ function CraftItem(){
 		if(input === recipes[i].name){
 			document.getElementById("CraftingCost").innerHTML = "Cost: " + recipes[i].cost + "<hr>";
 			console.log(recipes[i].name);
+			document.getElementById("Craftables").innerHTML = '';
 			for(j=0;j<recipes[i].reagents.length;j++){
 					//console.log(recipes[i].name);
 					document.getElementById("Craftables").innerHTML += recipes[i].reagents[j].item.name +":" + " " + recipes[i].reagents[j].quantity + "<hr>";
