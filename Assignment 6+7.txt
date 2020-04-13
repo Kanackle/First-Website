@@ -1,0 +1,15 @@
+The following assignment was a 2 week/2 part assignment.
+For the first week, we were to find a dataset we were interested in.
+The dataset I picked was one from many on mtgjson.
+From that dataset, I picked out the most important features of a mtg card and displayed those following features for all 121 cards.
+Each feature was stored in its own array and then displayed on the page together.
+There were some roadblocks I hit, but most of it was smooth sailing.
+
+For the second week, we were to use jquery to much more easily modify the DOM.
+Essentially, the dataset we picked from last week was to become more responsive to user input.
+I had many ideas of how I wanted to go about this.
+Originally, my plan was to sort by artists and then link to the various artist's website so users can see additional works.
+Unfortunately, a few of the artists didn't have their own website and linking a site to each card was a lot more tedious and harder than i thought.
+So, I planned to change it so that the whole card can just be displayed.
+That, also turned out to be a lot harder as I had to utilize the google images API and make sure it found the correct image and displayed that.
+In the end, i settled on a simple hover function that would display the card's flavor text, if it had any.
