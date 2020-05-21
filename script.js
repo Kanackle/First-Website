@@ -41,6 +41,7 @@ $(document).ready(function(){
 					changeRoom("east");
 					break;
 				case "west":
+					console.log(rooms[currentRoom].directions["west"]);
 					changeRoom("west");
 					break;
 				
@@ -174,9 +175,9 @@ function changeRoom(dir) {
 			}
 			Efood = Efood - (2*Earmy);
 			Yfood = Yfood - (2.5*Yarmy);
-			if(Efood <= 0 || Earmy <= 0 || Emoney <= 0){
-				Endgame();
-				break;
+			if(Efood <= 0 || Earmy <= 0 || Efood <= 0){
+				currentRoom = "end";
+				$('#game-text').append(rooms[currentRoom].description);
 			}
 			console.log(Efood);
 			console.log(currentRoom);
@@ -221,7 +222,6 @@ function EndGame(){
 	if(Efood <= 0 || Earmy <= 0 || Emoney <= 0){
 		currentRoom = "end";
 		$('#game-text').append(rooms[currentRoom].description);
-		return true;
 	}
 }
 
