@@ -1,0 +1,22 @@
+System: How much I tilt while playing video games
+
+Factors: Losing streak
+	Feelings of helplessness
+	Current mood
+	What game it is(singleplayer vs multiplayer)
+	If im playing with someone(group vs solo)
+	What are my objectives when playing the game?(to have fun or to win)
+
+Control over factors: No control over this; each multiplayer game is won or lost as a team
+			No control over this; multiplayer games are specifically designed in a way that a single player can't necessarily "carry" his team to victory
+			Some control over this(affected by factors 4,5,6 and itself)
+			Full control - I pick which game I want to play and when
+			A lot of control, but not necessarily full control - I decide if I want to join a group, however people can deny my request to group up with me/join their group
+			Full control - I decide how I wish to play the game
+
+All of these factors are varying degrees of short term effects
+
+Factors affecting each other: Current mood is affected by recent events/people I am grouped with/how serious i wish to take the game
+				Typically, I tend to have more fun playing the game if im in a group vs not in a group
+
+Feedback loop: Feelings of helplessness affects my current mood -> not focused on game -> feels helpless to stop losing streak -> current mood affected -> -> ->
