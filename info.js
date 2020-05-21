@@ -46,9 +46,9 @@ function updateVariables_money(){
 		Ymoney = Ymoney - Exped_money;
 	}
 }
-
-var Yfood = randomInteger(55000, 85000), Efood = randomInteger(50000, 65000);
-var Yarmy = randomInteger(5000, 7500), Earmy = randomInteger(15000, 25000);
+//let Earmy = 20000, Efood = 50, Emoney = 7500;
+let Yfood = randomInteger(55000, 85000), Efood = randomInteger(50000, 65000);
+let Yarmy = randomInteger(5000, 7500), Earmy = randomInteger(15000, 25000);
 let Ymoney = randomInteger(25000,30000), Emoney = randomInteger(15000, 20000);
 
 var info = {
@@ -57,9 +57,9 @@ var info = {
 	"info2": "You will gain and lose gold depending on your recent combat results. Go down to 0 and it is " + "<b>" + "GAME OVER" + "</b>",
 	"info3": "You will lose 2 food stocks for every soldier u have in your army after every battle. Food stock will replenish every day. Go down to 0 and it is " + "<b>" + "GAME OVER" + "</b>",
 }
-/*var strats = {
-	"a": "You have the advantage. Press forward!",
-	"b": "The enemy has the advantage. Would you like to continue your attack?",
-	"c": "Leave some soldiers behind to cover your retreat",
-	"d": "Order a full scale retreat"
-}*/
+var results = {
+	"a": "The day has been long and bloody. Both sides have suffered great casualties.",
+	"b": "The overwhelming pressure forces you to call your troops back",
+	"c": "Your superior army and tactics turned the tide of the battle in your favor. The day is yours!",
+	"d": "Reinforcements! The arrival of your citizen militias help turn the tide in your favor."
+}
