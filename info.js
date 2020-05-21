@@ -58,8 +58,8 @@ var info = {
 	"info3": "You will lose 2 food stocks for every soldier u have in your army after every battle. Food stock will replenish every day. Go down to 0 and it is " + "<b>" + "GAME OVER" + "</b>",
 }
 var results = {
-	"a": "The day has been long and bloody. Both sides have suffered great casualties.",
-	"b": "The overwhelming pressure forces you to call your troops back",
-	"c": "Your superior army and tactics turned the tide of the battle in your favor. The day is yours!",
-	"d": "Reinforcements! The arrival of your citizen militias help turn the tide in your favor."
+	"un": "The day has been long and bloody. Both sides have suffered great casualties.",
+	"deux": "The overwhelming pressure forces you to call your troops back",
+	"trois": "Your superior army and tactics turned the tide of the battle in your favor. The day is yours!",
+	"quatre": "Reinforcements! The arrival of your citizen militias help turn the tide in your favor."
 }
