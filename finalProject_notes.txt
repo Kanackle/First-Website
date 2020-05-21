@@ -1,0 +1,54 @@
+Idea:
+Mount and Blade copy simulator
+4 kingdoms
+Control one, 3 NPCs
+Simulate battles between them
+User decides which battles to take and how to go about them
+
+1)
+Made rooms object (rooms.js)
+Start room, Throne room, War_chambers
+Function to change between rooms using directions
+home_page.html - Front page for all info on game
+info.js - game instructions. to be appended onto front page
+
+2)
+Script.js:
+Random number generator functions -> Food, Army, Money
+4 kingdoms -> 12 random numbers
+Use F/A/M as variables in CombatScore function
+CombatScore determines strength
+4 kingdoms -> 4 strength numbers
+
+3)
+Added expedition room to rooms object
+User choice to increase amount of food, army or money
+4 kingdoms = WAYYYYYYYYY TOO MANY DECISIONS
+user only fights one kingdom at a time
+What to do about the other two kingdoms
+All kingdoms must have 4 dynamic variables regardless of entering a visible battle -> What about expeditions?
+Conditional for entering expedition room (changeRoom function applied)
+
+(would it have been easier if i had just made a high school simulator?)
+
+4)
+(high school simulator seems just as hard. Side project for the summer perhaps)
+Dial it down to 2 kingdoms
+Conditionals for entering war_chambers or expeditions
+Expeditions need to dynamically change combat score 
+War_chambers need to dynamically change combat score
+Both sets of variables have to match with one another
+
+5)
+Historical weather API included
+BADDDDDD mistake adding unloaded array to object loaded onto HTML page
+Removes all fixed variables from object and includes them in various appends
+Turns out appending things basically makes them dynamically allocated
+
+6)
+Simulate a battle -> Elaborate ideas
+Simple idea -> Run RNG function to symbolize losses/gains after battle
+
+7)
+Added end game function
+Break statements in various loops to end game once resource hits 0 
