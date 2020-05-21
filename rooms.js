@@ -58,4 +58,8 @@ var rooms = {
 			"west":"start"
 		}
 	},
+	"end": {
+		"description": "GAME OVER!!! Your leadership is too weak! The Kingdom of Yiramm have overrun your defenses and are advancing towards your position. \
+		You have no choice but to run away and hide in another kingdom."
+	}
 }
