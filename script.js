@@ -54,6 +54,12 @@ $(document).ready(function(){
 					for(i=0;i<5;i++){
 						window.setInterval(updateVariables_food(), 20000);
 						$('#game-text').append("Day" + day + ": Your new food storage is " + Efood + "<br>");
+						console.log(Efood);
+						if(Efood <= 0){
+							currentRoom = "end";
+							$('#game-text').append(rooms[currentRoom].description);
+							break;
+						}
 						Yfood_update = combatScore(Yfood, Yarmy, Ymoney);
 						Efood_update = combatScore(Efood, Earmy, Emoney);
 						day++;	
@@ -77,8 +83,12 @@ $(document).ready(function(){
 					for(i=0;i<7;i++){
 						window.setInterval(updateVariables_army(), 20000);
 						$('#game-text').append("Day" + day + ": Your new army size is " + Earmy + "<br>");
+						if(Earmy <= 0){
+							currentRoom = "end";
+							$('#game-text').append(rooms[currentRoom].description);
+							break;
+						}
 						Yarmy_update = combatScore(Yfood, Yarmy, Ymoney);
-						console.log(Yarmy + " TRACER " + Yarmy_update);
 						Earmy_update = combatScore(Efood, Earmy, Emoney);
 						day++;	
 					}
@@ -98,6 +108,11 @@ $(document).ready(function(){
 					for(i=0;i<3;i++){
 						window.setInterval(updateVariables_money(), 20000);
 						$('#game-text').append("Day" + day + ": Your new money amount is " + Emoney + "<br>");
+						if(Emoney <= 0){
+							currentRoom = "end";
+							$('#game-text').append(rooms[currentRoom].description);
+							break;
+						}
 						Ymoney_update = combatScore(Yfood, Yarmy, Ymoney);
 						Emoney_update = combatScore(Efood, Earmy, Emoney);
 						day++;	
@@ -125,7 +140,7 @@ function changeRoom(dir) {
 		console.log("This is" + currentRoom);
         $('#game-text').append("<p>" + rooms[currentRoom].description + "</p>");
 		if(currentRoom === "war_chambers"){
-			
+			$('#game-text').append("<p>" + "Army size: Kingdom of Elieveth = " + Earmy + " " + "Kingdom of Yiramm = " + Yarmy + "</p>");
 			if(eventWithProbability(.5)){ //50% chance of expedition being successful
 				$('#game-text').append("<p>" + "Day" + day + ": " + rooms[currentRoom].war_reports.description2 + "</p>");
 				$('#game-text').append("<p>" + "Your combat score is " + Eoriginal + ". The enemy combat score is " + Yoriginal);
@@ -136,11 +151,14 @@ function changeRoom(dir) {
 			}
 			console.log("ZENYATTA");
 			day++;
+			let Chambers = [];
+			Chambers = Object.values(results);
+			console.log(Chambers);
 			for(i=0;i<randomInteger(5,15);i++){
 				window.setInterval(updateVariables_food(), 20000);
 				window.setInterval(updateVariables_army(), 20000);
 				window.setInterval(updateVariables_money(), 20000);
-				$('#game-text').append("Day" + day);
+				//$('#game-text').append("Day" + day);
 				Yarmy_update = combatScore(Yfood, Yarmy, Ymoney);
 				Yfood_update = combatScore(Yfood, Yarmy, Ymoney);
 				Ymoney_update = combatScore(Yfood, Yarmy, Ymoney);
@@ -148,18 +166,34 @@ function changeRoom(dir) {
 				Earmy_update = combatScore(Efood, Earmy, Emoney);
 				Efood_update = combatScore(Efood, Earmy, Emoney);
 				Emoney_update = combatScore(Efood, Earmy, Emoney);
-				day++;	
+				Yoriginal = Math.floor((Yarmy_update + Yfood_update + Ymoney_update)/3);
+				Eoriginal = Math.floor((Earmy_update + Efood_update + Emoney_update)/3);
+				$('#game-text').append("<p>" + "Day" + day + ": " + Chambers[randomInteger(0,3)] + "<br>"
+				+ "Your combat score is " + Eoriginal + ". The enemy combat score is " + Yoriginal + "</p>");
+				day++;
+			}
+			Efood = Efood - (2*Earmy);
+			Yfood = Yfood - (2.5*Yarmy);
+			if(Efood <= 0 || Earmy <= 0 || Emoney <= 0){
+				Endgame();
+				break;
 			}
 			console.log(Efood);
-			Efood = Efood - (2*Earmy);
-			Yfood = Yfood - (2*Yarmy);
-			console.log(Efood);
+			console.log(currentRoom);
+			$('#game-text').append("The troops are exhausted and famished. After setting up camp and setting up a feast, you recheck your remaining supplies." + "<br>");
+			$('#game-text').append("Your new food supplies are " + Efood + "<br>" + "Your new army size is " + Earmy + "<br>" + "Your new money supply is " + Emoney);
 			Efood_update = combatScore(Efood, Earmy, Emoney);
-			Yfood_update = combatScore(Yfood, Yarmy, Ymoney);
+			Yfood_update = combatScore(Yfood, Yarmy, Ymoney); 
 			Yoriginal = Math.floor((Yarmy_update + Yfood_update + Ymoney_update)/3);
 			Eoriginal = Math.floor((Earmy_update + Efood_update + Emoney_update)/3);
-			$('#game-text').append("<p>" + "Your combat score is " + Eoriginal + ". The enemy combat score is " + Yoriginal);
+			$('#game-text').append("<p>" + "Your new combat score is " + Eoriginal + ". The enemy's new combat score is " + Yoriginal);
+			currentRoom = "start";
+			$('#game-text').append(rooms.start.description);
+			$('#game-text').append("The temperature is " + weather[day] + " Celsius");
 		}
+		/*currentRoom = "start";
+		$('#game-text').append(rooms.start.description);
+		$('#game-text').append("The temperature is " + weather[day] + " Celsius");*/
 		
 		if(currentRoom === "expeditions"){
 			let Expeditions = [];
@@ -182,6 +216,13 @@ function changeRoom(dir) {
 		alert("INVALID MOVE!");
         $('#game-text').append("<p>You cannot go that way!</p>");
     }
+}
+function EndGame(){
+	if(Efood <= 0 || Earmy <= 0 || Emoney <= 0){
+		currentRoom = "end";
+		$('#game-text').append(rooms[currentRoom].description);
+		return true;
+	}
 }
 
 /*if(currentRoom = "war_chambers"){
