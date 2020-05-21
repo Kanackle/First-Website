@@ -1,5 +1,5 @@
 let recipes=[];
-fetch("https://cors-anywhere.herokuapp.com/https://us.api.blizzard.com/d3/data/act?locale=en_US&access_token=USC0za5Gp9g5vtT4b8IbO4uuRF0cXXEyTQ")
+fetch("https://cors-anywhere.herokuapp.com/https://us.api.blizzard.com/d3/data/artisan/blacksmith?locale=en_US&access_token=USC0za5Gp9g5vtT4b8IbO4uuRF0cXXEyTQ")
 .then((response) => {
 	return response.json();
 })
